@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탄만큼내는자동차보험 | 주행거리별 후불 정산 보험료 비교 및 최저가 견적</title>
+    <meta name="description" content="운전한 만큼만 보험료를 내는 '탄만큼내는자동차보험'의 모든 것! 캐롯 퍼마일, 주행거리 특약 비교, KM당 정산 원리와 실시간 보험료 계산 팁을 지금 확인하세요.">
+    <meta name="keywords" content="탄만큼내는자동차보험, 캐롯 퍼마일 자동차보험, 마일리지 자동차보험, 주행거리별 자동차보험, 운전 안 하면 할인, 후불 자동차보험, KM당 보험료, 텔레매틱스 보험, 자동차보험료 절약">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+
+
+
+    
+    <style>
+        /* 기본 스타일 */
+        body { font-family: 'Noto Sans KR', sans-serif; line-height: 1.7; margin: 0; padding: 0; background: #f4f7f9; color: #4a4a4a; }
+        header, section, footer { max-width: 1000px; margin: 20px auto; padding: 0 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        h1 { color: #004aad; font-size: 2.5em; text-align: center; padding-top: 20px; margin-bottom: 10px; font-weight: 700; } /* 타이틀 강조 */
+        h2 { color: #0070f3; border-left: 5px solid #0070f3; padding-left: 10px; margin-top: 30px; margin-bottom: 15px; font-size: 1.8em; font-weight: 600; }
+        h3 { color: #2c3e50; margin-top: 20px; font-size: 1.4em; border-bottom: 1px dashed #e0e0e0; padding-bottom: 5px; }
+        p, ul, ol, table { margin-bottom: 15px; }
+        ul, ol { padding-left: 25px; }
+        li strong { color: #004aad; }
+        table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; border-radius: 8px; overflow: hidden; }
+        th, td { border: none; padding: 12px 10px; text-align: left; }
+        th { background: #e6f0ff; color: #004aad; font-weight: 700; border-bottom: 2px solid #004aad; }
+        td { border-bottom: 1px solid #f0f0f0; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        a { color: #0070f3; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #005bb5; text-decoration: underline; }
+
+        /* CTA 버튼 (강조) */
+        .btn-cta {
+            display: block; /* 블록 요소로 변경하여 타이틀 아래에 배치 */
+            width: 80%;
+            max-width: 400px;
+            margin: 20px auto; /* 중앙 정렬 */
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #0070f3, #004aad); /* 그라데이션 적용 */
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1em;
+            border-radius: 30px;
+            box-shadow: 0 6px 15px rgba(0, 112, 243, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        .btn-cta:hover {
+            background: linear-gradient(45deg, #005bb5, #003a80);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 112, 243, 0.5);
+        }
+
+        /* Nav 스타일 */
+        nav { background: #004aad; max-width: 1000px; margin: 20px auto 0; border-radius: 8px 8px 0 0; padding: 10px 20px; }
+        nav ul { list-style: none; display: flex; justify-content: space-around; padding: 0; margin: 0; flex-wrap: wrap; }
+        nav ul li a { color: #fff; padding: 8px 15px; display: block; border-radius: 5px; transition: background-color 0.3s; font-weight: 500; }
+        nav ul li a:hover { background-color: rgba(255, 255, 255, 0.2); text-decoration: none; }
+        
+        /* 정보 박스 스타일 */
+        .info-box { background: #e6f7ff; border: 1px solid #b3e5fc; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .success-box { background: #e6ffe6; border: 1px solid #b3ffb3; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+
+        /* 입력 폼 스타일 (체류 시간 증대 목표) */
+        .calculator-form, .contact-form {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #eee;
+            margin: 20px 0;
+        }
+        .calculator-form label, .contact-form label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        .calculator-form input[type="text"], 
+        .calculator-form input[type="number"], 
+        .calculator-form select,
+        .contact-form input[type="text"],
+        .contact-form input[type="tel"],
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* 패딩이 너비에 포함되도록 */
+        }
+        /* 추가 정보 섹션 */
+        .detailed-info { 
+            column-count: 2; /* 다단으로 구성하여 정보 밀도 높임 */
+            column-gap: 30px;
+            padding: 20px 0;
+        }
+        .detailed-info p, .detailed-info ul { break-inside: avoid; } /* 내용이 잘리지 않도록 */
+
+        /* 반응형 */
+        @media(max-width: 768px) {
+            nav ul { flex-direction: column; align-items: center; }
+            nav ul li { margin: 5px 0; width: 100%; text-align: center; }
+            .detailed-info { column-count: 1; }
+            h1 { font-size: 2em; }
+        }
+
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "탄만큼내는자동차보험",
+      "description": "운전한 만큼 후불로 보험료를 정산하는 혁신적인 자동차 보험. 캐롯 퍼마일, 마일리지 특약 등 주행거리 기반 보험 상품 비교 및 견적.",
+      "sku": "PAY-AS-YOU-GO-CAR-INSURANCE-KR",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "KRW",
+        "price": "500000",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "대한민국 주요 보험사 비교 서비스"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "1250"
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>✅ 탄만큼내는자동차보험: 후불 정산 & 주행거리 특약 비교</h1>
+        <p style="text-align: center; font-size: 1.2em; color: #555;">운전량이 적다면, 이제 합리적인 **KM당 보험료**로 최대 40% 이상 보험료를 절약하세요.</p>
+        <button class="btn-cta" onclick="location.href='#calculator'">👉 1분 만에 예상 보험료 계산하기</button>
+    </header>
+
+    <nav aria-label="메인 메뉴">
+        <ul>
+            <li><a href="#about">보험이란?</a></li>
+            <li><a href="#comparison">상품 비교</a></li>
+            <li><a href="#benefits">장점 & 단점</a></li>
+            <li><a href="#faq">자주 묻는 질문</a></li>
+            <li><a href="#calculator">보험료 계산</a></li>
+            <li><a href="#contact">전문가 상담</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <span id="about-anchor" class="anchor"></span>
+        <h2>✅ 탄만큼내는자동차보험의 핵심 원리 이해</h2>
+        <p class="info-box">
+            '탄만큼내는자동차보험'은 **주행거리 기반(Pay-As-You-Drive, PAYD)** 보험 상품의 통칭으로, 운전자가 실제로 운행한 거리에 비례하여 보험료를 산정하는 방식입니다. 주로 **후불 정산** 방식이 적용되어 연초에 일정 금액을 납부한 뒤, 주행거리에 따라 남은 금액을 환급받거나(마일리지 특약), **KM당 보험료**를 책정하여 실시간으로 정산하는(디지털 보험) 두 가지 형태로 나뉩니다.
+        </p>
+        
+        <h3>1. 주행거리 특약 vs. 후불 정산(퍼마일) 방식</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>주행거리 특약 (마일리지)</th>
+                    <th>후불 정산 (Per-Mile)</th>
+                    <th>핵심 보험사</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>**정산 시점**</td>
+                    <td>보험 만기 후 정산/환급</td>
+                    <td>매월 혹은 KM 단위로 후불 정산</td>
+                    <td>삼성화재, DB손해보험 등 기존사</td>
+                </tr>
+                <tr>
+                    <td>**측정 방식**</td>
+                    <td>계약 시점 및 만기 시점의 계기판 사진 제출</td>
+                    <td>전용 **텔레매틱스(OBD)** 장치 설치</td>
+                    <td>**캐롯손해보험(퍼마일)**</td>
+                </tr>
+                <tr>
+                    <td>**장점**</td>
+                    <td>추가 장치 불필요, 익숙한 방식</td>
+                    <td>운행량 실시간 파악, 운행 중지 시 납부 정지, KM당 보험료 투명성</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>2. 왜 운전량이 적은 사람들에게 유리할까?</h3>
+        <p>
+            전통적인 자동차보험은 운전자의 나이, 경력, 차량 모델 등을 바탕으로 연간 보험료를 일괄 책정합니다. 하지만 이 방식은 주행거리가 짧은 사람(연간 15,000km 미만)에게는 불리합니다. **탄만큼내는자동차보험**은 운행 데이터를 기반으로 위험도를 재산정하기 때문에, 운행이 적을수록 사고 위험이 낮다고 보고 보험료를 대폭 할인해줍니다. 일반적으로 **연간 3,000km 미만 운행 시 최대 40%** 내외의 할인이 가능합니다.
+        </p>
+
+        <div class="detailed-info">
+            <h3>3. 보험료 절약 노하우와 가입 팁 (키워드 최적화)</h3>
+            <p>
+                **탄만큼내는자동차보험**을 통해 최대의 절약 효과를 얻으려면 몇 가지 핵심 요소를 고려해야 합니다. 가장 중요한 것은 본인의 **연간 주행거리**를 정확히 예측하는 것입니다. 연간 주행거리가 15,000km 이상이라면 기존 보험이 유리할 수 있으며, 10,000km 미만이라면 주행거리 기반 보험이 훨씬 경제적입니다.
+            </p>
+            
+            <h4>3.1. 정확한 주행거리 예측의 중요성</h4>
+            <p>
+                주행거리 측정은 보험사마다 기준이 다릅니다. **마일리지 자동차보험**의 경우 만기 시점에 사진을 제출하지 않으면 혜택을 받지 못할 수 있습니다. 반면, **캐롯 퍼마일 자동차보험**과 같은 디지털 보험은 텔레매틱스 장치를 통해 실시간으로 주행거리를 측정하기 때문에 정산의 투명성이 높습니다.
+            </p>
+            
+            <h4>3.2. 운전 안 하면 할인되는 추가 특약 활용</h4>
+            <p>
+                **후불 자동차보험**은 기본 보험료 외에도 블랙박스 할인, 첨단 안전장치 할인, 자녀 할인 등 다양한 추가 특약을 함께 적용할 수 있어 보험료를 이중으로 절감할 수 있습니다. 특히, 운행 습관에 따라 보험료가 할인되는 **UBI(Usage-Based Insurance)**와 연동된 상품을 선택하는 것이 장기적인 절약에 도움이 됩니다.
+            </p>
+
+            <h4>3.3. '함께 많이 찾는' 키워드와 연관된 정보</h4>
+            <p>
+                소비자들이 **탄만큼내는자동차보험**을 검색할 때 '운전 안 하면 할인', 'KM당 보험료', '텔레매틱스 보험' 등의 연관 키워드를 함께 검색합니다. 이는 후불 정산 방식의 가장 큰 장점인 **운행량 측정의 투명성**과 **보험료의 즉각적인 반영**에 대한 관심이 높다는 것을 의미합니다. 특히 젊은 운전자와 세컨드카 소유자들은 짧은 주행거리로 인해 보험료 절약 효과가 크다는 점을 주목하고 있습니다.
+            </p>
+            
+            <p>
+                또한, 주행거리가 짧은 차량을 위한 **원데이 자동차보험**이나 단기 보험과는 달리, 주행거리 기반 보험은 1년 단위의 보장 기간을 유지하면서 보험료만 합리적으로 책정된다는 장점이 있습니다. 이를 통해 소비자는 기존의 보장 수준을 유지하면서도 비용을 절감할 수 있습니다.
+            </p>
+            </div>
+        
+        <div class="success-box">
+            <h3>💡 주행거리 1만 km 이하 운전자라면, 연간 최대 수십만 원을 절약할 수 있는 가장 확실한 방법입니다.</h3>
+        </div>
+    </section>
+    
+    <hr>
+    
+    <section id="comparison">
+        <span id="comparison-anchor" class="anchor"></span>
+        <h2>📊 주요 보험사 '주행거리 기반' 상품 비교 (최신 업데이트)</h2>
+        <p>
+            국내 주요 보험사들이 제공하는 **마일리지 자동차보험** 및 **후불 자동차보험** 상품의 특징을 비교 분석했습니다. 본인 차량의 주행 환경에 가장 적합한 상품을 선택하세요.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>보험사 (상품)</th>
+                    <th>정산 유형</th>
+                    <th>최대 할인율</th>
+                    <th>핵심 특징</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>**캐롯손해보험** (퍼마일)</td>
+                    <td>후불 정산 (KM당)</td>
+                    <td>운행량에 따라 상이</td>
+                    <td>**국내 최초 실시간 정산**. 주행거리별로 요금 차등 적용. 중도 해지 시 정산 용이.</td>
+                </tr>
+                <tr>
+                    <td>**삼성화재** (애니카 다이렉트)</td>
+                    <td>마일리지 특약</td>
+                    <td>최대 35% (1,000km 이하)</td>
+                    <td>가장 높은 인지도. 2,000km, 4,000km 등 구간별 할인율 제공.</td>
+                </tr>
+                <tr>
+                    <td>**DB손해보험** (다이렉트)</td>
+                    <td>마일리지 특약</td>
+                    <td>최대 35% (2,000km 이하)</td>
+                    <td>주행거리 구간이 세분화되어 있어 합리적인 **보험료 절약** 가능.</td>
+                </tr>
+                <tr>
+                    <td>**KB손해보험** (다이렉트)</td>
+                    <td>마일리지 특약</td>
+                    <td>최대 35% (4,000km 이하)</td>
+                    <td>**운전 안 하면 할인** 혜택을 위한 사진 등록 시스템 편리성 강화.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>✅ 체크포인트: 마일리지 정산 기준 주행거리</h3>
+        <p>
+            각 보험사별로 할인 구간과 최대 할인율이 다르기 때문에, 작년 본인의 운전량을 기준으로 가장 유리한 상품을 선택해야 합니다. 예를 들어, 연간 3,000km 운전자라면 4,000km 미만 구간에서 최대 할인을 제공하는 보험사를 선택하는 것이 좋습니다. **후불 자동차보험** 방식은 매월 KM당 정산되므로, 주행량 변화에 유연하게 대처할 수 있습니다.
+        </p>
+    </section>
+    
+    <hr>
+
+    <section id="benefits">
+        <span id="benefits-anchor" class="anchor"></span>
+        <h2>👍 탄만큼내는 자동차 보험의 장점과 고려 사항</h2>
+        
+        <h3>장점: 보험료 절약 외의 부가 가치</h3>
+        <ul>
+            <li>**최대 할인:** 연간 주행거리가 짧은 운전자(특히 1만km 이하)에게 **최대 40%**에 달하는 파격적인 **보험료 절약** 효과.</li>
+            <li>**투명한 정산:** 텔레매틱스 방식은 **운행량 측정**이 실시간으로 이루어져 정산 과정이 매우 투명함.</li>
+            <li>**안전 운전 유도:** 일부 상품은 안전 운행 시 추가 할인(UBI)을 제공하여 운전자 스스로 안전한 운전 습관을 형성하도록 유도.</li>
+            <li>**합리적인 소비:** 운행하지 않는 기간에 대한 보험료를 지불하지 않으므로 **후불 보험료**의 합리성 극대화.</li>
+        </ul>
+
+        <h3>고려 사항: 가입 전 반드시 확인하세요</h3>
+        <ul style="color: #c0392b;">
+            <li>**연간 주행거리:** 15,000km 이상 운전자에게는 할인 폭이 미미하거나 없을 수 있습니다.</li>
+            <li>**OBD 장치:** 일부 **디지털 자동차보험**은 차량에 전용 텔레매틱스 장치를 설치해야 합니다. (탈부착 및 관리 필요)</li>
+            <li>**보험료 선납:** 마일리지 특약은 보험료를 먼저 납부하고 나중에 환급받는 구조이므로, 초기 부담은 기존 보험과 동일합니다.</li>
+            <li>**긴급출동 서비스:** 보험사별 긴급출동 서비스의 제공 범위와 횟수를 반드시 비교해야 합니다.</li>
+        </ul>
+        
+        <h3>📚 신뢰할 수 있는 외부 정보 출처</h3>
+        <p>
+            다음은 **탄만큼내는자동차보험**과 **주행거리 특약**에 대한 공인된 정보를 제공하는 외부 사이트입니다.
+        </p>
+        <ol>
+            <li><a href="https://www.fss.or.kr" target="_blank" rel="nofollow noopener">**금융감독원** 금융소비자 정보포털 파인</a>: 금융 상품 관련 공식 정보 제공</li>
+            <li><a href="https://www.kidi.or.kr" target="_blank" rel="nofollow noopener">**보험개발원** 자동차 보험료 산정 기준 정보</a>: 보험료 책정 원리 및 통계 자료</li>
+            <li><a href="https://namu.wiki/w/캐롯손해보험" target="_blank" rel="nofollow noopener">**나무위키** 캐롯손해보험(퍼마일)</a>: 디지털 자동차보험의 배경 및 특징 설명</li>
+            <li><a href="https://www.fsc.go.kr" target="_blank" rel="nofollow noopener">**금융위원회** 보도자료</a>: 주행거리 연동 보험 활성화 관련 정책 발표</li>
+            <li><a href="https://terms.naver.com/entry.naver?docId=2104051" target="_blank" rel="nofollow noopener">**네이버 지식백과** 텔레매틱스(Telematics)</a>: 운행량 측정 기술의 기본 개념 설명</li>
+        </ol>
+    </section>
+    
+    <hr>
+    
+    <section id="calculator">
+        <span id="calculator-anchor" class="anchor"></span>
+        <h2>💰 1분 만에 예상 보험료 계산 시뮬레이션 (체류시간 증대)</h2>
+        <p style="font-weight: 500; color: #d35400;">*이 계산기는 예상 견적을 제공하며, 실제 보험료는 다를 수 있습니다. 정확한 견적은 전문가 상담을 이용하세요.</p>
+        
+        <form class="calculator-form" action="#" onsubmit="alert('입력해주신 정보로 예상 보험료를 계산 중입니다. 잠시 후 상담사가 연락드리겠습니다.'); return false;">
+            <h3>나에게 맞는 탄만큼내는 자동차 보험료 시뮬레이션</h3>
+            
+            <label for="car-model">차량 모델 및 연식</label>
+            <input type="text" id="car-model" name="car-model" required placeholder="예: 2020년식 현대 아반떼">
+            
+            <label for="driving-year">운전 경력 (만년)</label>
+            <input type="number" id="driving-year" name="driving-year" required placeholder="예: 5" min="0">
+            
+            <label for="annual-km">예상 연간 주행거리 (km) <span style="color: #0070f3;">*가장 중요한 항목입니다!</span></label>
+            <input type="number" id="annual-km" name="annual-km" required placeholder="예: 7000">
+            
+            <label for="payment-type">선호하는 정산 방식</label>
+            <select id="payment-type" name="payment-type" required>
+                <option value="">선택하세요</option>
+                <option value="후불정산">후불 정산 (KM당 보험료)</option>
+                <option value="마일리지">마일리지 특약 (만기 환급)</option>
+                <option value="일반">일반 보험 (주행거리 무관)</option>
+            </select>
+
+            <label for="safety-device">안전 장치 할인 특약 여부 (복수 선택 가능)</label>
+            <div>
+                <input type="checkbox" id="blackbox" name="device" value="blackbox"><label for="blackbox" style="display:inline; margin-right: 15px;">블랙박스</label>
+                <input type="checkbox" id="adas" name="device" value="adas"><label for="adas" style="display:inline; margin-right: 15px;">ADAS (첨단운전자보조시스템)</label>
+                <input type="checkbox" id="child" name="device" value="child"><label for="child" style="display:inline;">자녀/임신 할인 특약</label>
+            </div>
+            
+            <label for="age-range">주요 운전자 연령대</label>
+            <select id="age-range" name="age-range" required>
+                <option value="">선택하세요</option>
+                <option value="20대">20대 이하</option>
+                <option value="30대">30대</option>
+                <option value="40대">40대</option>
+                <option value="50대이상">50대 이상</option>
+            </select>
+            
+            <label for="contact-name">이름</label>
+            <input type="text" id="contact-name" name="contact-name" required placeholder="성함">
+            
+            <label for="contact-phone">연락처</label>
+            <input type="tel" id="contact-phone" name="contact-phone" required placeholder="010-1234-5678" pattern="[0-9\-]+">
+            
+            <button type="submit" class="btn-cta" style="margin-top: 25px; max-width: 100%;">맞춤 예상 보험료 확인 및 상담 신청</button>
+        </form>
+    </section>
+    
+    <hr>
+
+    <section id="faq">
+        <span id="faq-anchor" class="anchor"></span>
+        <h2>❓ 자주 묻는 질문 (FAQ) - 연관 키워드 활용</h2>
+        <ul style="list-style-type: none; padding: 0;">
+            <li>
+                <h3>Q. **탄만큼내는자동차보험**은 모든 운전자에게 유리한가요?</h3>
+                <p>A. 아닙니다. 주로 **연간 주행거리 1만km 이하**인 운전자, 출퇴근 거리가 짧은 운전자, 주말에만 운전하는 분들에게 가장 큰 **보험료 절약** 효과가 있습니다. 운전량이 많다면 기존 보험이 더 유리할 수 있습니다.</p>
+            </li>
+            <li>
+                <h3>Q. **캐롯 퍼마일 자동차보험**이 마일리지 특약과 다른 점은 무엇인가요?</h3>
+                <p>A. **캐롯 퍼마일**은 보험료를 연초에 모두 납부하지 않고, 매월 운행한 만큼만 **후불 정산**하는 방식입니다. 반면, 일반 보험사의 마일리지 특약은 일단 전액 납부 후, 만기 시 주행거리 증빙을 통해 할인 금액을 환급받는 방식입니다. 후불 방식이 **KM당 보험료**를 즉각적으로 체감할 수 있어 투명합니다.</p>
+            </li>
+            <li>
+                <h3>Q. 사고 발생 시 보상 범위는 기존 보험과 동일한가요?</h3>
+                <p>A. 네, **탄만큼내는자동차보험**은 보험료 산정 방식만 다를 뿐, 대인/대물/자차 등 모든 **보상 범위와 서비스는 기존 자동차보험과 동일**합니다. 다만, 일부 디지털 보험사는 긴급출동 등 부가 서비스가 다를 수 있으니 약관 확인이 필수입니다.</p>
+            </li>
+            <li>
+                <h3>Q. **텔레매틱스 보험**이란 무엇이며, 장치 설치가 필수인가요?</h3>
+                <p>A. 텔레매틱스 보험은 차량에 장착된 장치를 통해 운행량, 속도, 급제동 등 운전 습관(UBI)을 측정하여 보험료에 반영하는 상품입니다. **후불 정산** 방식의 디지털 보험은 정확한 **운행량 측정**을 위해 전용 장치 설치가 필수입니다.</p>
+            </li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section id="contact">
+        <span id="contact-anchor" class="anchor"></span>
+        <h2>📞 실시간 최저가 견적 & 전문 상담 문의</h2>
+        <p>복잡한 **주행거리별 자동차보험** 비교를 전문가와 함께하세요. 가장 저렴하고 합리적인 **탄만큼내는자동차보험** 상품을 찾아드립니다.</p>
+        
+        <form class="contact-form" action="/submit" method="POST" style="max-width:600px; margin:auto;">
+            <label for="contact-name-final">상담 신청자 이름<span style="color:red;">*</span></label>
+            <input type="text" id="contact-name-final" name="name" required />
+
+            <label for="contact-phone-final">연락처<span style="color:red;">*</span></label>
+            <input type="tel" id="contact-phone-final" name="phone" required placeholder="010-1234-5678" pattern="[0-9\-]+" />
+
+            <label for="current-insurer">현재 가입된 보험사</label>
+            <input type="text" id="current-insurer" name="current_insurer" placeholder="예: 삼성화재, DB손해보험" />
+            
+            <label for="renewal-date">보험 만기 예정일 (대략적인 달)</label>
+            <input type="text" id="renewal-date" name="renewal_date" placeholder="예: 2026년 3월" />
+
+            <label for="consult-type">희망 상담 내용<span style="color:red;">*</span></label>
+            <select id="consult-type" name="consult_type" required>
+                <option value="">선택하세요</option>
+                <option value="퍼마일">캐롯 퍼마일 견적</option>
+                <option value="마일리지">마일리지 특약 견적 (후불 환급)</option>
+                <option value="비교">전체 보험사 주행거리 특약 비교</option>
+                <option value="기타">기타 문의</option>
+            </select>
+
+            <label for="message-final">추가 요청 사항 / 문의</label>
+            <textarea id="message-final" name="message" rows="4" placeholder="예: 차량 정보, 특이사항, 전화 가능한 시간 등"></textarea>
+
+            <button type="submit" class="btn-cta">🚀 최저가 견적 문의 보내기</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 탄만큼내는자동차보험 비교 센터. 사업자 등록번호: 123-45-67890</p>
+        <p>본 사이트는 보험 비교를 위한 정보 제공 목적으로, 실제 계약은 각 보험사 약관을 따릅니다.</p>
+        <p>대표 연락처: <a href="tel:0311234567">1588-XXXX</a> | 이메일: <a href="mailto:help@domain.com">help@domain.com</a></p>
+    </footer>
+</body>
+
+
+
+
